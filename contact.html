@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact FableForge - Get in touch for questions, support, feedback, or collaboration." />
+  <title>Contact Us - FableForge Apps</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 100vh;
+      background: linear-gradient(180deg, #C8E6C9 0%, #66BB6A 100%);
+      z-index: 1;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 60px;
+      right: 0;
+      height: 70px;
+      background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #424242;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #1976D2;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    nav a.active {
+      color: #4CAF50;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #4CAF50;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .main-content {
+      margin-left: 60px;
+      margin-top: 70px;
+      min-height: calc(100vh - 70px);
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 80px 40px;
+      background-color: #ffffff;
+      position: relative;
+    }
+
+    .section-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #1976D2;
+      margin-bottom: 40px;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #424242;
+      margin-bottom: 20px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .quote {
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(76, 175, 80, 0.1) 100%);
+      border-left: 4px solid #2196F3;
+      padding: 30px 40px;
+      margin: 40px 0;
+      border-radius: 8px;
+      font-style: italic;
+      font-size: 20px;
+      color: #1976D2;
+      position: relative;
+    }
+
+    .quote-author {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #757575;
+      font-style: normal;
+      text-align: right;
+    }
+
+    .contact-info {
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.08) 0%, rgba(76, 175, 80, 0.08) 100%);
+      border: 2px solid rgba(33, 150, 243, 0.2);
+      border-radius: 16px;
+      padding: 50px;
+      text-align: center;
+      margin: 40px 0;
+      box-shadow: 0 4px 20px rgba(33, 150, 243, 0.1);
+    }
+
+    .contact-info h3 {
+      font-size: 32px;
+      color: #1976D2;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .contact-info a {
+      color: #2196F3;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #4CAF50;
+      text-decoration: underline;
+    }
+
+    .contact-info p {
+      color: #757575;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
+      padding: 30px 40px;
+      text-align: center;
+      color: #ffffff;
+      margin-left: 60px;
+    }
+
+    footer a {
+      color: #81D4FA;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 0;
+      }
+
+      header {
+        left: 0;
+        padding: 0 20px;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      footer {
+        margin-left: 0;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      section h2 {
+        font-size: 32px;
+      }
+
+      nav {
+        gap: 15px;
+        font-size: 14px;
+      }
+
+      .contact-info {
+        padding: 30px 20px;
+      }
+
+      .contact-info a {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar"></div>
+  
+  <header>
+    <a href="index.html" class="logo">
+      <img src="assets/logo/FableForge+Logo.webp" alt="FableForge Logo" />
+      <div class="logo-text">FableForge</div>
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <section>
+      <div class="section-container">
+        <h2>Contact Us</h2>
+
+        <div class="quote">
+          "The single biggest problem in communication is the illusion that it has taken place."
+          <div class="quote-author">— George Bernard Shaw</div>
+        </div>
+
+        <p>
+          We'd love to hear from you! Whether you have questions about our products, need technical support, 
+          want to provide feedback, or are interested in collaboration opportunities, we're here to help.
+        </p>
+
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>
+            <a href="mailto:support@fableforgeapps.com">support@fableforgeapps.com</a>
+          </p>
+          <p>
+            We do our best to respond to all inquiries in a timely manner.
+          </p>
+        </div>
+
+        <div class="quote">
+          "Coming together is a beginning; keeping together is progress; working together is success."
+          <div class="quote-author">— Henry Ford</div>
+        </div>
+
+        <div class="quote">
+          "The way to get started is to quit talking and begin doing."
+          <div class="quote-author">— Walt Disney</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> FableForge LLC. All rights reserved.</p>
+    <p style="margin-top: 10px;">Built with ❤️ for thoughtful, human-centered software.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

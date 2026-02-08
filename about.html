@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about FableForge - an independent app studio building human-centered AI experiences." />
+  <title>About - FableForge Apps</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 100vh;
+      background: linear-gradient(180deg, #C8E6C9 0%, #66BB6A 100%);
+      z-index: 1;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 60px;
+      right: 0;
+      height: 70px;
+      background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #424242;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #1976D2;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    nav a.active {
+      color: #4CAF50;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #4CAF50;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .main-content {
+      margin-left: 60px;
+      margin-top: 70px;
+      min-height: calc(100vh - 70px);
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 80px 40px;
+      background-color: #ffffff;
+      position: relative;
+    }
+
+    .section-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #1976D2;
+      margin-bottom: 40px;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+
+    section h3 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1976D2;
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #424242;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .quote {
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(76, 175, 80, 0.1) 100%);
+      border-left: 4px solid #2196F3;
+      padding: 30px 40px;
+      margin: 40px 0;
+      border-radius: 8px;
+      font-style: italic;
+      font-size: 20px;
+      color: #1976D2;
+      position: relative;
+    }
+
+    .quote-author {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #757575;
+      font-style: normal;
+      text-align: right;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
+      padding: 30px 40px;
+      text-align: center;
+      color: #ffffff;
+      margin-left: 60px;
+    }
+
+    footer a {
+      color: #81D4FA;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 0;
+      }
+
+      header {
+        left: 0;
+        padding: 0 20px;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      footer {
+        margin-left: 0;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      section h2 {
+        font-size: 32px;
+      }
+
+      nav {
+        gap: 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar"></div>
+  
+  <header>
+    <a href="index.html" class="logo">
+      <img src="assets/logo/FableForge+Logo.webp" alt="FableForge Logo" />
+      <div class="logo-text">FableForge</div>
+    </a>
+    <nav>
+      <a href="about.html" class="active">About</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <section>
+      <div class="section-container">
+        <h2>About FableForge</h2>
+        
+        <div class="quote">
+          "Technology is best when it brings people together." 
+          <div class="quote-author">— Matt Mullenweg</div>
+        </div>
+
+        <p>
+          FableForge is an independent app studio dedicated to building thoughtful, human-centered digital experiences. 
+          We specialize in creating applications that leverage artificial intelligence to help people reflect on their lives, 
+          grow personally, and connect with themselves and others in meaningful ways.
+        </p>
+
+        <p>
+          Our mission is to develop applications that feel intuitive, supportive, and genuinely helpful in everyday life. 
+          We believe technology should enhance human experience rather than replace it, and our products are designed with 
+          this philosophy at their core.
+        </p>
+
+        <p>
+          From AI-powered journaling companions to wellness tools and entertainment experiences, we craft each application 
+          with careful attention to user experience, privacy, and the genuine value it brings to people's lives.
+        </p>
+
+        <h3>Our Approach</h3>
+        <p>
+          At FableForge, we combine cutting-edge AI technology with thoughtful design principles. We focus on creating 
+          applications that are not just functional, but also meaningful and supportive of users' personal growth journeys.
+        </p>
+
+        <p>
+          We prioritize privacy, security, and user control in everything we build. Our applications are designed to 
+          empower users, not to exploit their data or attention. We believe in building trust through transparency and 
+          by consistently delivering value.
+        </p>
+
+        <div class="quote">
+          "The best way to predict the future is to invent it."
+          <div class="quote-author">— Alan Kay</div>
+        </div>
+
+        <h3>What We Do</h3>
+        <p>
+          FableForge develops applications across several key areas:
+        </p>
+        <ul style="font-size: 18px; color: #424242; line-height: 1.8; margin-left: 30px; margin-bottom: 20px;">
+          <li><strong>AI-Powered Journaling:</strong> Tools that help people reflect on their experiences and track their personal growth</li>
+          <li><strong>Wellness Applications:</strong> Apps designed to support mental health and wellbeing</li>
+          <li><strong>Entertainment Experiences:</strong> Engaging interactive applications that bring joy and connection</li>
+          <li><strong>Productivity Tools:</strong> Applications that help people accomplish their goals more effectively</li>
+        </ul>
+
+        <p>
+          Each of our products is built with the understanding that technology should serve people, not the other way around. 
+          We're committed to creating software that feels like a helpful companion rather than a demanding taskmaster.
+        </p>
+
+        <div class="quote">
+          "Design is not just what it looks like and feels like. Design is how it works."
+          <div class="quote-author">— Steve Jobs</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> FableForge LLC. All rights reserved.</p>
+    <p style="margin-top: 10px;">Built with ❤️ for thoughtful, human-centered software.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Discover FableForge products including LumenLeaf Journal - AI-powered journaling companion." />
+  <title>Products - FableForge Apps</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 100vh;
+      background: linear-gradient(180deg, #C8E6C9 0%, #66BB6A 100%);
+      z-index: 1;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 60px;
+      right: 0;
+      height: 70px;
+      background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #424242;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #1976D2;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    nav a.active {
+      color: #4CAF50;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #4CAF50;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .main-content {
+      margin-left: 60px;
+      margin-top: 70px;
+      min-height: calc(100vh - 70px);
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 80px 40px;
+      background-color: #ffffff;
+      position: relative;
+    }
+
+    .section-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #1976D2;
+      margin-bottom: 40px;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+
+    section h3 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1976D2;
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #424242;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .quote {
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(76, 175, 80, 0.1) 100%);
+      border-left: 4px solid #2196F3;
+      padding: 30px 40px;
+      margin: 40px 0;
+      border-radius: 8px;
+      font-style: italic;
+      font-size: 20px;
+      color: #1976D2;
+      position: relative;
+    }
+
+    .quote-author {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #757575;
+      font-style: normal;
+      text-align: right;
+    }
+
+    .product-card {
+      background: linear-gradient(135deg, rgba(33, 150, 243, 0.08) 0%, rgba(76, 175, 80, 0.08) 100%);
+      border: 2px solid rgba(33, 150, 243, 0.2);
+      border-radius: 16px;
+      padding: 50px;
+      margin: 40px 0;
+      box-shadow: 0 4px 20px rgba(33, 150, 243, 0.1);
+    }
+
+    .product-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .product-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #2196F3 0%, #4CAF50 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 900;
+      font-size: 32px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .product-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1976D2;
+      margin: 0;
+    }
+
+    .product-subtitle {
+      font-size: 18px;
+      color: #757575;
+      margin-top: 5px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .feature-item {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid rgba(33, 150, 243, 0.2);
+    }
+
+    .feature-item h4 {
+      font-size: 20px;
+      color: #1976D2;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .feature-item ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-item li {
+      color: #424242;
+      font-size: 16px;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .feature-item li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .product-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+      color: white;
+      box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+    }
+
+    footer {
+      background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
+      padding: 30px 40px;
+      text-align: center;
+      color: #ffffff;
+      margin-left: 60px;
+    }
+
+    footer a {
+      color: #81D4FA;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 0;
+      }
+
+      header {
+        left: 0;
+        padding: 0 20px;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      footer {
+        margin-left: 0;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      section h2 {
+        font-size: 32px;
+      }
+
+      nav {
+        gap: 15px;
+        font-size: 14px;
+      }
+
+      .product-card {
+        padding: 30px 20px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar"></div>
+  
+  <header>
+    <a href="index.html" class="logo">
+      <img src="assets/logo/FableForge+Logo.webp" alt="FableForge Logo" />
+      <div class="logo-text">FableForge</div>
+    </a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="leadership.html">Leadership</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <section>
+      <div class="section-container">
+        <h2>Our Products</h2>
+
+        <div class="quote">
+          "Simplicity is the ultimate sophistication."
+          <div class="quote-author">— Leonardo da Vinci</div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-header">
+            <div class="product-icon">LL</div>
+            <div>
+              <h3 class="product-title">LumenLeaf Journal</h3>
+              <div class="product-subtitle">AI-Powered Journaling Companion</div>
+            </div>
+          </div>
+
+          <p>
+            <strong>LumenLeaf Journal</strong> is your AI-powered journaling companion that transforms daily conversations 
+            into meaningful journal entries. Experience a new way to reflect, grow, and understand yourself through 
+            guided journaling—without the hassle of manual writing.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature-item">
+              <h4>🤖 Conversational AI Journaling</h4>
+              <ul>
+                <li>Chat naturally with your AI companion</li>
+                <li>Automatic journal entry generation</li>
+                <li>Created every night at midnight</li>
+                <li>No manual writing required</li>
+              </ul>
+            </div>
+
+            <div class="feature-item">
+              <h4>📔 Smart Journal Management</h4>
+              <ul>
+                <li>Beautiful, organized journal entries</li>
+                <li>Mood tracking with color indicators</li>
+                <li>Search through your journal history</li>
+                <li>Automatic date-based organization</li>
+              </ul>
+            </div>
+
+            <div class="feature-item">
+              <h4>🌱 Weekly Insights & Growth</h4>
+              <ul>
+                <li>AI-generated weekly highlights</li>
+                <li>Personalized focus tasks</li>
+                <li>Track emotional patterns over time</li>
+                <li>Understanding of relationships</li>
+              </ul>
+            </div>
+
+            <div class="feature-item">
+              <h4>🔒 Privacy & Security</h4>
+              <ul>
+                <li>End-to-end encryption</li>
+                <li>Private and secure conversations</li>
+                <li>Google Sign-In authentication</li>
+                <li>Secure cloud storage</li>
+              </ul>
+            </div>
+
+            <div class="feature-item">
+              <h4>💫 Wellness Dashboard</h4>
+              <ul>
+                <li>View weekly highlights at a glance</li>
+                <li>Track focus tasks for the week</li>
+                <li>Visual mood trends and patterns</li>
+                <li>Holistic emotional journey view</li>
+              </ul>
+            </div>
+
+            <div class="feature-item">
+              <h4>🎨 Beautiful Design</h4>
+              <ul>
+                <li>Clean, modern interface</li>
+                <li>Smooth animations and transitions</li>
+                <li>Dark mode support</li>
+                <li>Intuitive navigation</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>How It Works</h3>
+          <p>
+            <strong>1. Chat Daily:</strong> Talk to your AI companion about your day, thoughts, feelings, and experiences throughout the day.
+          </p>
+          <p>
+            <strong>2. Automatic Journaling:</strong> Every night at midnight in your timezone, your conversations are analyzed and 
+            transformed into a reflective journal entry.
+          </p>
+          <p>
+            <strong>3. Weekly Insights:</strong> Every 7 days, receive personalized highlights summarizing your week and focus tasks 
+            to help you grow.
+          </p>
+          <p>
+            <strong>4. Reflect & Grow:</strong> Search, read, and learn from your journal entries over time to understand your 
+            emotional patterns and personal growth journey.
+          </p>
+
+          <h3>Technical Highlights</h3>
+          <p>
+            Built with React Native and Expo for smooth performance, LumenLeaf Journal features a cloud-based backend for 
+            reliability and scalability, real-time synchronization across devices, optimized data usage, and offline reading 
+            support. The app requires Android 5.0 (Lollipop) or higher and an active internet connection for AI features.
+          </p>
+
+          <h3>Perfect For</h3>
+          <p>
+            LumenLeaf Journal is ideal for anyone looking to maintain a daily journaling practice, people who find traditional 
+            journaling time-consuming, those who want to understand their emotional patterns, anyone seeking a private space 
+            for self-reflection, and individuals working on personal growth and mindfulness.
+          </p>
+
+          <div class="product-buttons">
+            <a href="#" class="btn btn-primary">Download on Google Play</a>
+            <a href="contact.html" class="btn btn-secondary">Get Support</a>
+          </div>
+        </div>
+
+        <div class="quote">
+          "The details are not the details. They make the design."
+          <div class="quote-author">— Charles Eames</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> FableForge LLC. All rights reserved.</p>
+    <p style="margin-top: 10px;">Built with ❤️ for thoughtful, human-centered software.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
