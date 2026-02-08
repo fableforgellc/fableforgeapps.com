@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy Policy for LumenLeaf Journal - Learn how we protect your data and privacy." />
+  <title>Privacy Policy - LumenLeaf Journal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 100vh;
+      background: linear-gradient(180deg, #C8E6C9 0%, #66BB6A 100%);
+      z-index: 1;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 60px;
+      right: 0;
+      height: 70px;
+      background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.15);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #424242;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #1976D2;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #4CAF50;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .main-content {
+      margin-left: 60px;
+      margin-top: 70px;
+      min-height: calc(100vh - 70px);
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 80px 40px;
+      background-color: #ffffff;
+      position: relative;
+    }
+
+    .section-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section h1 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #1976D2;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .last-updated {
+      font-size: 14px;
+      color: #757575;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    section h2 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1976D2;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    section h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #424242;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    section p {
+      font-size: 16px;
+      color: #424242;
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    section ul {
+      margin-left: 30px;
+      margin-bottom: 15px;
+    }
+
+    section li {
+      font-size: 16px;
+      color: #424242;
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+
+    section strong {
+      color: #1976D2;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #1976D2;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #4CAF50;
+    }
+
+    .back-link::before {
+      content: '← ';
+      margin-right: 5px;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
+      padding: 30px 40px;
+      text-align: center;
+      color: #ffffff;
+      margin-left: 60px;
+    }
+
+    footer a {
+      color: #81D4FA;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 0;
+      }
+
+      header {
+        left: 0;
+        padding: 0 20px;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      footer {
+        margin-left: 0;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      section h1 {
+        font-size: 32px;
+      }
+
+      section h2 {
+        font-size: 24px;
+      }
+
+      nav {
+        gap: 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar"></div>
+  
+  <header>
+    <a href="../index.html" class="logo">
+      <img src="../assets/logo/FableForge+Logo.webp" alt="FableForge Logo" />
+      <div class="logo-text">FableForge</div>
+    </a>
+    <nav>
+      <a href="../about.html">About</a>
+      <a href="../leadership.html">Leadership</a>
+      <a href="../products.html">Products</a>
+      <a href="../contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <section>
+      <div class="section-container">
+        <a href="../products.html" class="back-link">Back to Products</a>
+        
+        <h1>PRIVACY POLICY</h1>
+        <p class="last-updated">Last Updated: January 22, 2026</p>
+
+        <h2>1. INTRODUCTION</h2>
+        <p>
+          LumenLeaf ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and protect your information when you use the LumenLeaf Journal application ("App").
+        </p>
+        <p>
+          By using LumenLeaf Journal, you acknowledge that you have read and understood this Privacy Policy and consent to the collection, use, and sharing of your information as described herein.
+        </p>
+
+        <h2>2. INFORMATION WE COLLECT</h2>
+        
+        <h3>2.1 Account Information</h3>
+        <ul>
+          <li>Email address (when you register using Google OAuth)</li>
+          <li>Username</li>
+          <li>Profile information (birth year, gender, goals)</li>
+          <li>Profile photo (optional)</li>
+        </ul>
+
+        <h3>2.2 Journal Content</h3>
+        <ul>
+          <li>Journal entries and text you write or that are generated by the AI</li>
+          <li>Conversation history with the AI companion</li>
+          <li>Mood scores and emotional data</li>
+          <li>Relationship notes</li>
+          <li>Weekly highlights and summaries</li>
+        </ul>
+
+        <h3>2.3 Usage Information</h3>
+        <ul>
+          <li>App interaction data</li>
+          <li>Device information (device type, operating system)</li>
+          <li>Login timestamps</li>
+          <li>Feature usage statistics</li>
+        </ul>
+
+        <h3>2.4 Technical Information</h3>
+        <ul>
+          <li>IP address (for security purposes)</li>
+          <li>Error logs and diagnostic data</li>
+          <li>App performance metrics</li>
+        </ul>
+
+        <h2>3. HOW WE USE YOUR INFORMATION</h2>
+        <p>We use your information to:</p>
+        <ul>
+          <li>Provide and maintain the App's core functionality</li>
+          <li>Generate personalized journal entries using AI</li>
+          <li>Provide AI companion conversational features</li>
+          <li>Generate insights, weekly highlights, and relationship tracking</li>
+          <li>Improve and optimize the App experience</li>
+          <li>Communicate with you about your account and the App</li>
+          <li>Provide customer support</li>
+          <li>Detect and prevent fraud, abuse, or security issues</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+
+        <h2>4. DATA STORAGE AND SECURITY</h2>
+        
+        <h3>4.1 Encryption</h3>
+        <p>
+          Your journal entries are encrypted at rest using Google Cloud KMS (Key Management Service). Journal entries are only decrypted when needed for processing. Data in transit is encrypted using industry-standard TLS/SSL protocols.
+        </p>
+
+        <h3>4.2 Cloud Storage</h3>
+        <p>
+          Your data is stored on Google Cloud Platform infrastructure. We implement appropriate technical and organizational measures to protect your data. Our servers are located in secure data centers with restricted access.
+        </p>
+
+        <h3>4.3 Access Controls</h3>
+        <p>
+          Only authorized personnel have access to systems containing user data. Access is logged and monitored for security purposes. We use role-based access controls to limit data access.
+        </p>
+
+        <h2>5. DATA SHARING AND THIRD PARTIES</h2>
+        <p>
+          <strong>We do NOT sell your personal information or journal content to third parties.</strong>
+        </p>
+        <p>We may share your information only in the following limited circumstances:</p>
+
+        <h3>5.1 Service Providers</h3>
+        <ul>
+          <li>Google Cloud Platform: For hosting and infrastructure</li>
+          <li>OpenAI: For AI-powered features (journal generation and conversation)</li>
+          <li>Google OAuth: For authentication services</li>
+          <li>App Store Providers (Apple, Google): For payment processing and app distribution</li>
+        </ul>
+
+        <h3>5.2 Legal Requirements</h3>
+        <p>We may disclose your information if required by law, court order, or government request, or if we believe disclosure is necessary to:</p>
+        <ul>
+          <li>Comply with legal obligations</li>
+          <li>Protect our rights, property, or safety</li>
+          <li>Prevent fraud or abuse</li>
+          <li>Respond to emergencies involving danger of death or serious physical injury</li>
+        </ul>
+
+        <h3>5.3 Business Transfers</h3>
+        <p>
+          In the event of a merger, acquisition, or sale of assets, your information may be transferred to the acquiring entity.
+        </p>
+
+        <h2>6. AI PROCESSING</h2>
+        <p>
+          Your journal entries and conversations are processed by OpenAI's API to provide AI companion features. We send only necessary context to the AI service (not your entire journal history at once). OpenAI has its own privacy policy and data handling practices. We implement retry mechanisms and error handling to protect your data during transmission.
+        </p>
+
+        <h2>7. DATA RETENTION</h2>
+        <p>
+          We retain your account information and journal entries for as long as your account is active. You may delete individual journal entries at any time. If you delete your account, we will delete or anonymize your personal information within 90 days, except:
+        </p>
+        <ul>
+          <li>Information required for legal, accounting, or security purposes</li>
+          <li>Anonymized, aggregated data used for analytics</li>
+        </ul>
+
+        <h2>8. YOUR PRIVACY RIGHTS</h2>
+        <p>Depending on your location, you may have the following rights:</p>
+
+        <h3>8.1 Access and Portability</h3>
+        <ul>
+          <li>You can access your journal entries and data within the App</li>
+          <li>You may request a copy of your data in a portable format</li>
+        </ul>
+
+        <h3>8.2 Correction</h3>
+        <ul>
+          <li>You can edit your profile information and journal entries within the App</li>
+        </ul>
+
+        <h3>8.3 Deletion</h3>
+        <ul>
+          <li>You can delete individual journal entries</li>
+          <li>You can request deletion of your entire account</li>
+        </ul>
+
+        <h3>8.4 Opt-Out</h3>
+        <ul>
+          <li>You may opt out of certain communications</li>
+          <li>You can disable specific features (e.g., notifications)</li>
+        </ul>
+
+        <h3>8.5 GDPR Rights (European Users)</h3>
+        <p>If you are in the European Economic Area, you have additional rights under GDPR:</p>
+        <ul>
+          <li>Right to restrict processing</li>
+          <li>Right to object to processing</li>
+          <li>Right to lodge a complaint with a supervisory authority</li>
+        </ul>
+
+        <h3>8.6 CCPA Rights (California Users)</h3>
+        <p>If you are a California resident, you have rights under the California Consumer Privacy Act:</p>
+        <ul>
+          <li>Right to know what personal information is collected</li>
+          <li>Right to know whether personal information is sold or disclosed</li>
+          <li>Right to opt-out of the sale of personal information (we do not sell your data)</li>
+          <li>Right to deletion</li>
+          <li>Right to non-discrimination for exercising your privacy rights</li>
+        </ul>
+
+        <h2>9. CHILDREN'S PRIVACY</h2>
+        <p>
+          The App is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we discover that we have collected information from a child under 13, we will delete it immediately.
+        </p>
+
+        <h2>10. INTERNATIONAL DATA TRANSFERS</h2>
+        <p>
+          Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place for such transfers, including:
+        </p>
+        <ul>
+          <li>Standard contractual clauses</li>
+          <li>Adequacy decisions</li>
+          <li>Your consent</li>
+        </ul>
+
+        <h2>11. COOKIES AND TRACKING</h2>
+        <p>The App does not use cookies in the traditional web sense. However, we may use:</p>
+        <ul>
+          <li>Local storage for app functionality and preferences</li>
+          <li>Analytics tools to understand app usage</li>
+          <li>Crash reporting tools to identify and fix issues</li>
+        </ul>
+
+        <h2>12. PRIVACY BY DESIGN</h2>
+        <p>We incorporate privacy principles into our development process:</p>
+        <ul>
+          <li>Data minimization (we collect only what's necessary)</li>
+          <li>Purpose limitation (we use data only for stated purposes)</li>
+          <li>Storage limitation (we don't keep data longer than necessary)</li>
+          <li>Security measures at every level</li>
+        </ul>
+
+        <h2>13. CHANGES TO THIS PRIVACY POLICY</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of material changes by:</p>
+        <ul>
+          <li>Posting a notice in the App</li>
+          <li>Sending an email to your registered email address</li>
+          <li>Updating the "Last Updated" date at the top of this policy</li>
+        </ul>
+        <p>
+          Your continued use of the App after changes constitutes acceptance of the updated Privacy Policy.
+        </p>
+
+        <h2>14. CONTACT US</h2>
+        <p>
+          If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us at:
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:support@fableforgeapps.com">support@fableforgeapps.com</a><br>
+          <strong>Website:</strong> <a href="https://fableforgeapps.com/">https://fableforgeapps.com/</a><br>
+          <strong>Subject:</strong> Privacy Policy Inquiry
+        </p>
+        <p>
+          For data deletion requests, please use subject line: "Data Deletion Request"<br>
+          For data access requests, please use subject line: "Data Access Request"
+        </p>
+        <p>We will respond to your request within 30 days.</p>
+
+        <h2>15. CALIFORNIA SHINE THE LIGHT LAW</h2>
+        <p>
+          California residents may request information about our disclosure of personal information to third parties for direct marketing purposes. We do not share personal information with third parties for their direct marketing purposes.
+        </p>
+
+        <h2>16. DO NOT TRACK SIGNALS</h2>
+        <p>
+          The App does not currently respond to "Do Not Track" signals as there is no universally accepted standard for handling such signals.
+        </p>
+
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #E0E0E0;">
+
+        <p style="margin-top: 30px; font-style: italic; color: #757575;">
+          By using LumenLeaf Journal, you acknowledge that you have read and understood this Privacy Policy and consent to the collection, use, and sharing of your information as described herein.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> FableForge LLC. All rights reserved.</p>
+    <p style="margin-top: 10px;">Built with ❤️ for thoughtful, human-centered software.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
